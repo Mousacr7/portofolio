@@ -1,13 +1,321 @@
-body {
+/* GLOBAL RESET */
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(rgba(10, 25, 47, 0.95), rgba(10, 25, 47, 0.95)), url('https://images.unsplash.com/photo-1498050108023-c5249f4df085') no-repeat center center/cover;
+  color: #e0f2f1;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  margin: 0 6rem 0 3rem;
+  border-bottom: 1px solid #64ffda33;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+
+header h1 {
+  cursor: pointer;
+  user-select: none;
+  font-size: 2.75em;
+  color: #00e5ff;
+  transition: transform 0.3s;
+}
+
+header h1:hover {
+  transform: scale(1.05);
+}
+
+nav li {
+  list-style: none;
+}
+
+nav .item .link {
+  color: #e0f2f1;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.link::after {
+  background-color: #00e5ff;
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  transition: all 0.3s;
+}
+
+nav .item .link:hover::after {
+  width: 100%;
+}
+
+nav .item:first-child a {
+  color: #00e5ff;
+}
+
+.menu-bar {
+  display: none;
+  font-size: 2rem;
+  font-weight: 900;
+  width: 55px;
+  text-align: center;
+  height: 54px;
+  cursor: pointer;
+  padding: 2px;
+}
+
+.about {
+  padding: 2rem 1rem;
+  min-height: 70vh;
+  background-color: #112240dd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+
+.about-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-content h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.main .img {
+  max-width: 300px;
+  border-radius: 50%;
+  border: 4px solid #00e5ff;
+  box-shadow: 0 0 20px #00e5ff99;
+  margin: auto;
+  display: block;
+  
+}
+
+.cards {
+  background-color: #112240;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.card {
+  background: #ffffff;
+  text-align: center;
+  margin: 10px;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  color: #000;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 229, 255, 0.5);
+}
+
+.progress-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: conic-gradient();
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.progress-circle .percent {
+  width: 80px;
+  height: 80px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.project-card {
+  padding: 1.5rem;
+  background-color: #112240ee;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 24px rgba(0, 229, 255, 0.4);
+}
+
+.project-card .project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  gap: 1rem;
+}
+
+.project-card img {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 8px;
+}
+
+.project p {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.project ul {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project ul li {
+  background-color: #00e5ff22;
+  color: #00e5ff;
+  min-width: 50px;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 600;
+}
+
+button {
+  background-color: #00e5ff;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: all 0.4s ease;
+  color: #0a192f;
+  box-shadow: 0 4px 15px rgba(0, 229, 255, 0.3);
+}
+
+button:hover {
+  background-color: #00bcd4;
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 229, 255, 0.5);
+}
+
+.footer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+  padding: 2rem;
+  background-color: #0a192f;
+  height: auto;
+  gap: 2rem;
+  color: #ccc;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+input {
+  width: 100%;
+  border: none;
+  height: 40px;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.mail {
+  height: 20vh;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  .menu-bar {
+    display: block;
+  }
+
+  header {
+    margin: auto 1rem;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #112240;
+    flex-direction: column;
+    padding: 1.5rem;
+    border-radius: 5px;
+  }
+
+  .mobile-style {
+    display: flex;
+  }
+
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .main .img {
+    margin: 1rem auto;
+  }
+
+  .progress-circle {
+    margin: 1rem auto;
+  }
 }
