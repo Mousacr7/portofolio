@@ -1,23 +1,35 @@
-import {useState} from "react"
+import { useState } from "react";
+import { FaHome, FaEnvelope, FaFolderOpen, FaUser } from "react-icons/fa";
 
 const Header = () => {
-  const item =["home",'about','projects','contact']
-  const [ismenuOpen, setIsMenuOpen] =useState(false)
-  const toggle = () => {
-    setIsMenuOpen(!ismenuOpen);
-  }
-  return (
-    <header>
-      <h1 className="logo">Protofolio</h1>
-      <div className="menu-bar" onClick={toggle}>&#9776;</div>
-      <nav className={ismenuOpen ? "mobile-style": ""}>
-        {item.map((item,index )=> (
-          <li className="item"key={index}><a className="link" href={item}>{item}</a></li>
-        ))}
-     <a href="#button"className="button"><button>Hire me</button></a>
-     </nav>
-    </header>
-  )
-}
+  const items = [
+    { name: "home",href: "#",logo: <FaHome /> },
+    { name: "Services", href: "#services",logo: <FaUser /> },
+    { name: "projects", href: "#projects",logo: <FaFolderOpen /> },
+    { name: "contact",href:"mailto:mosamlam389@gmail.com", logo: <FaEnvelope /> }
+  ];
 
-export default Header
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggle = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  return (
+    <header >
+      <h1 className="logo" >Portfolio</h1>
+      <div className="menu-bar" onClick={toggle}>&#9776;</div>
+      <nav className={isMenuOpen ? "mobile-style" : ""}>
+          {items.map((item, index) => (
+            <li className="item" key={index}>
+              <a className="link" href={item.href}>
+                {item.logo} {item.name.charAt(0).toUpperCase() + item.name.slice(1)}
+              </a>
+            </li>
+          ))}
+      </nav>
+    </header>
+  );
+};
+
+export default Header;

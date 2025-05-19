@@ -1,21 +1,31 @@
 
 const About = () => {
   return (
-    <section className="about">
+ <section className="hero-section">
+  <div className="hero-text">
+    <h1>Hi, I'm Musa</h1>
+    <h2>I'm a Frontend Developer</h2>
+    <p>
+      I build modern, responsive web apps using JavaScript and React.
+      With a background in Electrical Engineering and Computer Science, I bring both logic and creativity to every project.
 
-      <div className="about-content">
-        <h2>Hi i'am Musa Abubakar</h2>
-        <div className="about-text">
-            <p>
-               <h3> I'm a frontend developer</h3> with a background in Electrical Engineering and computer Science. I focus on building responsive web apps using JavaScript and React. I've Projects like weather app, currency converter , and task tracker usning real APIs and localStorage, and now I'am expanding into full-stack development.
-                I enjoy learning through building, improving UI/UX, and solving real problems through clea, functional code. My goal is to grow as a freelance developer and build meaningful digital exeriences.
-            </p>
-        </div>
-      </div>
-            <div className="main">
-            <img className="img" src="/pic.jpg" alt="selfie" />
-            </div>
-    </section>
+      My work includes a weather app, currency converter, and a task tracker — all using real APIs and localStorage.
+      I'm currently learning full-stack development to expand my skills.
+
+      I enjoy solving real problems through clean, functional code, and I'm passionate about improving UI/UX.
+      My goal is to grow as a freelance developer and build meaningful digital experiences.
+    </p>
+    <a href="#contact" className="button">
+      <button>Hire Me</button>
+    </a>
+  </div>
+
+  <div className="hero-image">
+    <img src="profile.jpg" alt="Mousa's Profile" />
+  </div>
+</section>
+
+
   )
 }
 

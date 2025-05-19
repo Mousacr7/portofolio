@@ -1,17 +1,17 @@
+import Header from "./components/Header"
 import About from "./components/About";
-import Header from "./components/Header";
-import Main from "./components/Main";
+import Services from "./components/Services";
 import Project from "./components/Project";
-import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <div className="App">
       <Header />
       <About />
-      <Main />
+      <Services />
       <Project />
-      <Contact />
+      <Footer />
     </div>
   );
 }
