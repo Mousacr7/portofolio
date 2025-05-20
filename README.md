@@ -12,7 +12,7 @@ A modern, responsive developer portfolio built with **React**, showcasing my ski
 ![Desktop Hero](./screen-shots/hero-section.jpeg)
 
 #### Services Section
-! [Desktop Services Section](./screen-shots/services.jpeg)
+![Desktop Services Section](./screen-shots/services.jpeg)
 
 #### projects section
 ![Desktop projects section](./screen-shots/projects.jpeg)
@@ -24,7 +24,7 @@ A modern, responsive developer portfolio built with **React**, showcasing my ski
 ![mobile Hero](./screen-shots/phone-hero.jpeg)
 
 #### Services Section
-! [mobile Services Section](./screen-shots/phone-servce.jpeg)
+![mobile Services Section](./screen-shots/phone-servce.jpeg)
 
 #### projects section
 ![Desktop projects section](./screen-shots/projects-phone.jpeg)
