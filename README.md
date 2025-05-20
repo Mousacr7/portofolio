@@ -4,7 +4,7 @@ A modern, responsive developer portfolio built with **React**, showcasing my ski
 
 ## 🚀 Live Demo
 
-[🌐 Visit My Portfolio](https://your-deployed-site-link)  
+[🌐 Visit My Portfolio](https://musa-portfolio.netlify.app/)  
 ---
 
 ## 📸 Screenshots
