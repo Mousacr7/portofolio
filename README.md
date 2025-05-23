@@ -2,6 +2,9 @@
 
 A modern, responsive developer portfolio built with **React**, showcasing my skills, projects, and contact information. Designed to highlight both frontend and backend development capabilities in a sleek, professional layout.
 
+## 🚀 Live Demo
+
+[🌐 Visit My Portfolio](https://musa-portfolio.netlify.app/)  
 ---
 
 ## 📸 Screenshots
@@ -28,10 +31,6 @@ A modern, responsive developer portfolio built with **React**, showcasing my ski
 
 #### projects section
 ![Desktop projects section](./screen-shots/projects-phone.jpeg)
-
-## 🚀 Live Demo
-
-[🌐 Visit My Portfolio](https://your-deployed-site-link)  
 
 ---
 
