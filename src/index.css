@@ -139,13 +139,11 @@ header h1:hover {
   transform: scale(1.02);
 }
 
-.hero-image {
-  flex-shrink: 0;
-  max-width: 300px;
-  width: 100%;
-}
 
 .hero-image img {
+  max-width: 250px;
+width: 100%;
+height: auto;
   width: 100%;
   height: auto;
   border-radius: 50%;

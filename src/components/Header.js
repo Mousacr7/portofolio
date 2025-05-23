@@ -14,6 +14,7 @@ const Header = () => {
   const toggle = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+  const closeMune = () => setIsMenuOpen(false)
 
   return (
     <header >
@@ -22,7 +23,7 @@ const Header = () => {
       <nav className={isMenuOpen ? "mobile-style" : ""}>
           {items.map((item, index) => (
             <li className="item" key={index}>
-              <a className="link" href={item.href}>
+              <a className="link" href={item.href}onClick={closeMune}>
                 {item.logo} {item.name.charAt(0).toUpperCase() + item.name.slice(1)}
               </a>
             </li>
