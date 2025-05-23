@@ -306,9 +306,11 @@ h2,
 
 .project p {
   text-align: center;
-  margin: 1rem 0;
+  margin: 0.75rem 0;
 }
-
+.project h2 {
+  margin: 1rem 0 -1rem 0;
+}
 .project ul {
   display: flex;
   gap: 0.5rem;
