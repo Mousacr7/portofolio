@@ -296,13 +296,17 @@ h2,
   gap: 1rem;
 }
 
-.project-card img {
-  width: 100%;
-  
-  max-width: 280px;
+.project-image {
+  max-height: 300px;    /* limit image container height */
+  overflow-y: auto;     /* allow vertical scrolling if needed */
   border-radius: 8px;
-  max-height: 300px;
-  overflow-y: auto;
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px 8px 0 0; 
 }
 
 .project p {

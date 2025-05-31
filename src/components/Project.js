@@ -24,7 +24,9 @@ const Project = () => {
     transition={{ duration: 0.3, delay: index * 0.2 }}
   >
             <div className='project-card'>
+                <div className="project-image">
                 <img src={project.img} alt={project.title}/>
+                </div>
                 <div className='project'>
                 <h2>{project.title}</h2>
                 <p>{project.discrption}</p>
