@@ -300,6 +300,7 @@ h2,
   width: 100%;
   max-width: 280px;
   border-radius: 8px;
+  height: 300px;
   overflow-y: auto;
 }
 
