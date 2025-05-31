@@ -18,7 +18,7 @@ const Footer = () => {
         </a>
         <a href="mailto:mosamlam389@gmail.com"><FaEnvelope /> Email</a>
         <a
-          href="https://linkedin.com/in/yourprofile"
+          href="https://sa.linkedin.com/in/musa-abubakar-735a43336"
           target="_blank"
           rel="noopener noreferrer"
         >
